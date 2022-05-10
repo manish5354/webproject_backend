@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Portfolio</title>
+</head>
+
+<body>
+    <style>
+         :root {
+            --aboutme: #64A6BD;
+            --education: #90A8C3;
+            --experience: #AFC1D6;
+            --projects: #CEF9F2;
+            --blogs: #7CC6FE;
+            --contact: #8FA6CB;
+            --nav: #a787f0;
+        }
+        
+        .container {
+            height: 200vh;
+            display: grid;
+            grid-template-columns: 0.3fr 1fr;
+            grid-template-rows: 0.2fr 0.3fr 1fr 1fr 1fr 0.2fr;
+            grid-template-areas: "namebar namebar" "nav nav" "aboutme info" "education education" "experience experience" "projects projects" "blogs blogs" "contact contact";
+            grid-gap: 0.5rem;
+            background-color: #303030;
+        }
+        
+        #namebar {
+            background-color: var(--aboutme);
+            grid-area: namebar;
+        }
+        
+        nav {
+            background-color: var(--nav);
+            grid-area: nav;
+        }
+        
+        #aboutme {
+            background-color: var(--aboutme);
+            grid-area: aboutme;
+        }
+        
+        #info {
+            background-color: var(--aboutme);
+            grid-area: info;
+        }
+        
+        #education {
+            background-color: var(--education);
+            grid-area: education;
+        }
+        
+        #experience {
+            background-color: var(--experience);
+            grid-area: experience;
+        }
+        
+        #projects {
+            background-color: var(--projects);
+            grid-area: projects;
+        }
+        
+        #blogs {
+            background-color: var(--blogs);
+            grid-area: blogs;
+        }
+        
+        #contact {
+            background-color: var(--contact);
+            grid-area: contact;
+        }
+        
+        .dateClass {
+            float: right;
+            padding: 10px;
+        }
+        
+        .nameclass {
+            background-color: #303030;
+            color: white;
+        }
+        
+        .topnavclass {
+            overflow: visible;
+            position: relative;
+        }
+        
+        .topnavclass a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+            float: none;
+            text-align: left;
+        }
+        
+        .topnavclass a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        
+        .topnavclass .icon {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        
+        header {
+            width: 100%;
+            padding: 0%;
+            background-color: #303030;
+            height: 15px;
+            position: sticky;
+            text-align: center;
+            font-size: 20px;
+            font-weight: 500;
+        }
+        
+        .fa {
+            padding: 10px;
+            font-size: 30px;
+            width: 20px;
+            text-align: center;
+            text-decoration: none;
+        }
+        
+        .fa:hover {
+            opacity: 0.7;
+        }
+        
+        .fa-facebook {
+            background: #3B5998;
+            color: white;
+        }
+        
+        .fa-twitter {
+            background: #55ACEE;
+            color: white;
+        }
+        
+        .fa-linkedin {
+            background: #044a80;
+            color: white;
+        }
+        
+        .padd {
+            padding: 10px;
+        }
+        
+        .row {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+        }
+        
+        .vertical-line {
+            height: 80px;
+            position: relative;
+            top: 5px;
+            padding-left: 5px;
+            border-right: 2px solid gray;
+        }
+        
+        .contact-details {
+            padding-left: 15%;
+            width: 70%;
+            justify-content: space-around;
+            height: 50px;
+            padding-top: 2%;
+        }
+        
+        .headerbg {
+            background-color: #52489c;
+            padding: 5px;
+            color: white;
+            font-size: 17px;
+            font-weight: 500;
+        }
+        
+        #hideChild {
+            display: none;
+        }
+        
+        @media only screen and (max-width:700px) {
+            .container {
+                grid-template-columns: 1fr;
+                grid-template-rows: 0.2fr 0.2fr 1fr 1fr 1fr 1fr 1fr 0.8fr 0.2fr;
+                grid-template-areas: "namebar" "nav" "aboutme" "info" "education" "experience" "projects" "blogs" "contact";
+            }
+        }
+    </style>
+    <div class="container">
+        <div id="namebar">
+            <header>
+                <div class="nameclass">
+                    MANISH CHANDRA SINGARAPU
+                </div>
+            </header>
+        </div>
+        <nav class="topnavclass" id="topnav">
+            <a class="icon menuItemClass">MENU
+                <i class="fa fa-bars"></i>
+            </a>
+            <br><br><br><br>
+            <div class="Navoptions" style="display: none;">
+                <a href="#namebar"> HOME </a>
+                <a href="#aboutme">ABOUT ME</a>
+                <a href="#education">EDUCATION</a>
+                <a href="#experience">EXPERIENCE</a>
+                <a href="#projects">PROJECTS</a>
+                <a href="#blogs">BLOGS</a>
+                <a href="#contact">CONTACT</a>
+                <a href="./api">API</a>
+            </div>
+        </nav>
+        <div id="aboutme">
+            <div class="headerbg">
+                ABOUT ME
+            </div>
+            <div>
+                <div style="padding-left: 40px; padding-right: 20px;">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjhvASb086Ron_fawzDEcheYC9QRLQeOgmfg&usqp=CAU" alt="My Pic" style="width:200px;height:200px;">
+                </div>
+            </div>
+        </div>
+        <div id="info">
+            <div class="headerbg">.</div>
+            <div style="padding: 10px;">
+                <p><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ea veritatis exercitationem, esse eum nihil officiis atque mollitia praesentium ratione, magnam minima cupiditate, ut sapiente debitis. Eaque eum quas non!. Lorem ipsum
+                    dolor sit amet consectetur adipisicing elit. Sunt ea veritatis exercitationem, esse eum nihil officiis atque mollitia praesentium ratione, magnam minima cupiditate, ut sapiente debitis. Eaque eum quas non!. Lorem ipsum dolor sit amet
+                    consectetur adipisicing elit. Sunt ea veritatis exercitationem, esse eum nihil officiis atque mollitia praesentium ratione, magnam minima cupiditate, ut sapiente debitis. Eaque eum quas non!</p>
+            </div>
+        </div>
+        <div id="education">
+            <div class="headerbg">
+                EDUCATION
+            </div>
+            <div class="row">
+                <div class="padd">
+                    <img src="https://www.uniagents.com/ga-institution/logo/institute_2435_logo1592203494.png" height="70px" width="70px" alt="UNH" />
+                </div>
+                <div class="vertical-line padd"></div>
+                <div class="padd">
+                    <div><b>University of New Haven</b></div>
+                    <div>Master of Sciences | Computer Science</div>
+                    <div>
+                        <p><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ea veritatis exercitationem, esse eum nihil officiis atque mollitia praesentium ratione, magnam minima cupiditate, ut sapiente debitis. Eaque eum quas non!</p>
+                    </div>
+                </div>
+                <div class="dateClass">
+                    Aug 2021 - Now
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="padd">
+                    <img src="https://pbs.twimg.com/profile_images/1318799507086192641/NQKCPaT__400x400.jpg" height="70px" width="70px" alt="UNH" />
+                </div>
+                <div class="vertical-line padd"></div>
+                <div class="padd">
+                    <div><b>Gandhi Institute of Technology and Management</b></div>
+                    <div>Bachelor of Technology | ECE</div>
+                    <div>
+                        <p><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ea veritatis exercitationem, esse eum nihil officiis atque mollitia praesentium ratione, magnam minima cupiditate, ut sapiente debitis. Eaque eum quas non!</p>
+                    </div>
+                </div>
+                <div class="dateClass">
+                    Apr 2013 - Apr 2017
+                </div>
+            </div>
+        </div>
+        <div id="experience">
+            <div class="headerbg">
+                EXPERIENCE
+            </div>
+            <div class="row">
+                <div class="padd">
+                    <img src="https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_256,w_256,f_auto,q_auto:eco,dpr_1/v1401341713/cutf6qxfnnexthaw3bgt.jpg" height="70px" width="70px" alt="UNH" />
+                </div>
+                <div class="vertical-line padd"></div>
+                <div class="padd">
+                    <div><b>Epiq Systems, India</b> <br> <i>Software Engineer</i></div>
+                    <div>
+                        <p><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ea veritatis exercitationem, esse eum nihil officiis atque mollitia praesentium ratione, magnam minima cupiditate, ut sapiente debitis. Eaque eum quas non!</p>
+                    </div>
+                </div>
+                <div class="dateClass">
+                    Nov 2019 - Aug 2021
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="padd">
+                    <img src="https://media-exp1.licdn.com/dms/image/C4E0BAQEMvQ8E6gXSPA/company-logo_200_200/0/1625820626997?e=2159024400&v=beta&t=P_QmKHybJwx-0RE_IRaT4CGPm7cRe9CEJOZ1bHbo_nI" height="70px" width="70px" alt="UNH" />
+                </div>
+                <div class="vertical-line padd"></div>
+                <div class="padd">
+                    <div><b>Tata Consultancy Services, India</b> <br> <i>System Engineer</i></div>
+                    <div>
+                        <p><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ea veritatis exercitationem, esse eum nihil officiis atque mollitia praesentium ratione, magnam minima cupiditate, ut sapiente debitis. Eaque eum quas non!</p>
+                    </div>
+                </div>
+                <div class="dateClass">
+                    Oct 2017 - Nov 2019
+                </div>
+            </div>
+        </div>
+        <div id="projects">
+            <div class="headerbg">
+                PROJECTS
+            </div>
+            <div class="row">
+                <div class="padd">
+                    <div>
+                        <p><b>NCAA Claims</b> &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; Epiq Systems
+                            <br><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ea veritatis exercitationem, esse eum nihil officiis atque mollitia praesentium ratione, magnam minima cupiditate, ut sapiente debitis. Eaque eum quas non!</p>
+                    </div>
+                </div>
+                <div class="dateClass">
+                    Nov 2019 - Aug 2021
+                </div>
+            </div>
+            <div class="row">
+                <div class="padd">
+                    <div>
+                        <p><b>Field Service Automation</b> &ensp;&ensp;&ensp;&ensp;&ensp;&ensp; Tata Consultancy Services
+                            <br><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ea veritatis exercitationem, esse eum nihil officiis atque mollitia praesentium ratione, magnam minima cupiditate, ut sapiente debitis. Eaque eum quas non!</p>
+                    </div>
+                </div>
+                <div class="dateClass">
+                    Oct 2017 - Nov 2019
+                </div>
+            </div>
+        </div>
+        <div id="blogs">
+            <div class="headerbg">
+                BLOGS
+            </div>
+            <div>
+                <ul>
+                    <li><a href="https://www.google.com/" target="_blank">Realtime Experience VS Daily Practice</a></li><br>
+                    <li><a href="https://www.google.com/" target="_blank">Masters in USA</a></li>
+                </ul>
+            </div>
+        </div>
+        <footer id="contact">
+            <div class="headerbg" style="text-align: center;">
+                CONTACT
+            </div>
+            <div class="row contact-details">
+                <div title="phone ">
+                    <a href="tel: +1 203 450 5159 "><span
+                                class="material-icons inline-icon md-36 ">phone</span></a>
+                </div>
+                <div title="e-mail">
+                    <a href="mailto: manish.singarapu@gmail.com " target="_blank"><span
+                                class="material-icons inline-icon md-36 ">mail</span></a>
+                </div>
+                <div title="twitter">
+                    <a href="https://twitter.com/" class="fa fa-twitter" target="_blank"></a>
+                </div>
+                <div title="facebook">
+                    <a href="https://www.facebook.com/ " class="fa fa-facebook" target="_blank"></a>
+                </div>
+                <div title="linked in">
+                    <a href="https://www.linkedin.com/in/smanishc/" class="fa fa-linkedin" target="_blank"></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script>
+        const Navoptions = document.querySelector(".Navoptions")
+
+        const menuItem = document.querySelector(".menuItemClass")
+        menuItem.addEventListener("mouseover", expandNav)
+
+        function expandNav() {
+            Navoptions.style.display = "block"
+            setTimeout(function() {
+                Navoptions.style.display = "none"
+            }, 3000);
+        }
+    </script>
+</body>
+
+</html>
